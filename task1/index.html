@@ -1,9 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Task1</title>
+  <title>Task1</title>
 </head>
 <body>
-	<h1>Task1</h1>
+  <h1>Enter Site Title</h1>
+  <small>
+    <u>
+      <i>Enter Site Slogan</i>
+    </u>
+  </small>
+  <p> <strong>Lorem</strong> ipsum dolor sit amet consectetur adipisicing elit. Fuga, illum aut cupiditate provident voluptates officia totam qui dolores culpa laboriosam facere reprehenderit ea cumque ducimus distinctio dignissimos ratione quas autem.<br> <a href=""> Read More</a></p>
+  <hr/>
+  <h2><u>Ordered List</u></h2>
+  <ol>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ol>
+  <h2><u>Unordered List</u></h2>
+  <ul>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+  </ul>
+  <hr/>
+  <pre>
+    function message() {
+    alert('Hello HTML')
+    }
+
+    message()
+  </pre>
+  <hr/>
+  <details>
+    <summary>Details</summary>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dicta necessitatibus praesentium quo nobis officia nihil ducimus ad inventore, exercitationem earum provident aperiam ratione eveniet omnis at veniam. Quia, eligendi!</p>
+  </details>
+  <h2>HTML table 1</h2>
+  <table width="600" border="1">
+    <thead>
+      <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+        <th>Product Quality</th>
+        <th>Product Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Wheat</td>
+        <td>Good</td>
+        <td>200 Bags</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rice</td>
+        <td>Good</td>
+        <td>250 Bags</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Sugar</td>
+        <td>Good</td>
+        <td>200 Bags</td>
+      </tr>
+    </tbody>
+  </table>
+  <hr/>
+  <h2>HTML table 2</h2>
+    <table width="600" border="1">
+      <thead>
+        <tr>
+          <th>HEading1</th>
+          <th>Heading2</th>
+          <th>Heading3</th>
+          <th>Heading4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4"><img src="images/htmlCode.jpg" width="350px"></td>
+          <td colspan="3">Long row top</td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <td>data</td>
+          <td colspan="2">merge 2 cols</td>
+        </tr>
+        <tr>
+          <td colspan="3">Long row bottom</td>
+        </tr>
+      </tbody>
+    </table>
+  <h2>Coding</h2>
+  <hr/>
+  <form>
+    <table>
+      <tbody>
+        <tr>
+          <td>Name :</td>
+          <td><input type="text" name="name" placeholder="Name"></td>
+        </tr>
+        <tr>
+          <td>Password :</td>
+          <td><input type="text" name="pass" placeholder="Password"></td>
+        </tr>
+        <tr>
+          <td>Gender :</td>
+          <td>
+            <input type="radio" name="gender">Male</input>
+            <input type="radio" name="gender" >Female</input>
+          </td>
+        </tr>
+        <tr>
+          <td>Email :</td>
+          <td><input type="text" name="email" placeholder="Email"></td>
+        </tr>
+        <tr>
+          <td>Phone :</td>
+          <td>
+            <select name="numbers">
+              <option>+374</option>
+              <option>458</option>
+              <option>374</option>
+              <option>007</option>
+              <option>695</option>
+              <option>458</option>
+            </select>
+            <input type="phone" name="phone" placeholder="(XXX)">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" value="Submit">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
 </body>
 </html>
