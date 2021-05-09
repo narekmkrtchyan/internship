@@ -1,0 +1,168 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+* {
+	margin:0;
+	font-family: sans-serif;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+.main_container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 127px;
+  gap: 20px;
+  min-height: 100vh;
+  grid-template-areas: 
+  'left_column work_experience'
+  'left_column education' 
+  'footer footer';
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.left-column {
+  grid-area: left_column;
+  background-color: #fff;
+  @include box-shadow(0, 4, 10, 0, 20, 0, 4, 20, 0, 19);
+  h2 {
+    font-size: 18px;
+    color: #757575;
+    padding: 18px 16px;
+    i {
+      margin-right: 16px;
+    }
+  }
+  hr {
+    width: calc(100% - 32px);
+    margin-left: 16px;
+  }
+}
+
+section {
+  padding: 16px;
+  background-color: #fff;
+  @include box-shadow(0, 2, 5, 0, 16, 0, 2, 10, 0, 12);
+  h2 {
+    font-size: 30px;
+    color: #757575;
+    margin: 10px 0 26px;
+    i {
+      padding-left: 5px;
+    }
+  }
+  i {
+    margin-right: 16px;
+  }
+}
+
+.work-experience {
+  grid-area: work_experience;
+}
+
+.education {
+  grid-area: education;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  > * {
+    margin: 15px 0;
+  }
+  i, a {
+    color: #fff !important;
+  }
+  i {
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.avatar-wrapper {
+  position: relative;
+  h2 {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 16px;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+    box-sizing: border-box;
+  }
+}
+
+.info-item {
+  padding: 15px 16px 0;
+  i {
+    margin-right: 16px;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+i {
+  color: $primary-color;
+}
+
+.progress-bar {
+  @for $i from 0 through  100 {
+    &.progress-#{$i} {
+      &.large {
+        @include progress-bar($i, 24px);
+      }
+      &:not(.large) {
+        @include progress-bar($i, 17.68px);
+      }
+    }
+  }
+  &:last-child {
+    margin-bottom: 18px;
+  }
+  + h2 {
+    margin-top: 36px;
+  }
+}
+
+.experience-item {
+  padding: 0 16px;
+  h5 {
+    font-size: 18px;
+    color: $title-color;
+    margin: 10px 0;
+  }
+  h6 {
+    font-size: 16px;
+    font-weight: 400;
+    color: $primary-color;
+    .current {
+      color: #fff;
+      background-color: $primary-color;
+      padding: 0 8px;
+      line-height: 24px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+  }
+  p {
+    font-size: 15px;
+    line-height: 22.5px;
+    color: #000;
+    margin: 15px 0;
+  }
+}

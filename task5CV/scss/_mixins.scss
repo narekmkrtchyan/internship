@@ -1,0 +1,39 @@
+@mixin box-shadow($a1, $b1, $c1, $d1, $p1, $a2, $b2, $c2, $d2, $p2) {
+  box-shadow: #{$a1}px #{$b1}px #{$c1}px #{$d1}px rgba(0, 0, 0, calc(0.01 * #{$p1})),
+              #{$a2}px #{$b2}px #{$c2}px #{$d2}px rgba(0, 0, 0, calc(0.01 * #{$p2}));
+}
+
+@mixin progress-bar($percent, $height) {
+	max-width: calc(100% - 32px);
+	margin-left: auto;
+	margin-right: auto;
+	h4 {
+    font-size: 15px;
+    color: #757575;
+		padding: 15px 0;
+	}
+	.progress {
+		display: inline-block;
+		width: 100%;
+		height: $height;
+		border-radius: 16px;
+		background-color: #f1f1f1;
+		position: relative;
+		padding-right: percentage((100 - $percent) / 100);
+		box-sizing: border-box;
+		color: #fff;
+		text-align: center;
+		z-index: 1;
+		&:before {
+			content: '';
+			width: percentage($percent / 100);
+			height: 100%;
+			display: inline-block;
+			border-radius: 16px;
+			position: absolute;
+			background-color: #009688;
+			left: 0;
+			z-index: -1;
+		}
+	}
+}
