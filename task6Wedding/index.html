@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="./fonts/css/fontawesome.css" rel="stylesheet">
+  <!-- <link href="./fonts/css/v4-shims.css" rel="stylesheet">
+  <link href="./fonts/css/brands.css" rel="stylesheet">
+  <link href="./fonts/css/solid.css" rel="stylesheet"> -->
+  <title>Wedding Jane&John</title>
+</head>
+<body>
+  <header id="home" class="grayscale">
+    <div class="banner-container">
+      <h1>Jane & John</h1>
+      <p>Are getting married</p>
+      <span>17.07.2017</span>
+    </div>
+  </header>
+  <section class="fixed-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#us">Jane & John</a></li>
+      <li><a href="#wedding">Wedding</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+    </ul>
+  </section>
+  <section id="us" class="grayscale">
+    <h2>Jane & John</h2>
+    <div>
+      <img src="./images/wedding_couple2.jpg" />
+      <p>
+        You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <a href="#wedding" class="button">Wedding Details</a>
+    </div>
+  </section>
+  <section class="invitation">
+    <div class="banner-container">
+      <h2>You are invited</h2>
+      <p>Of course...</p>
+    </div>
+  </section>
+  <section id="wedding" class="grayscale">
+    <div>
+      
+      <h2 class="uppercase">The Wedding</h2>
+      <img src="./images/wedding_location.jpg" />
+      <div class="grid-2">
+        <div class="when-where">
+          <h4>When</h4>
+          <span>Wedding Ceremony - 2:00pm</span>
+          <span>Reception & Dinner - 5:00pm</span>
+        </div>
+        <div class="when-where">
+          <h4>Where</h4>
+          <span>Some place, an address</span>
+          <span>Some where, some address</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="rsvp">
+    <h3 class="uppercase">Hope you can make it</h3>
+    <p>Kindly Respond By January, 2017</p>
+    <button type="button" onclick="openModal()">RSVP</button>
+    <div id="rsvpModal" class="modal-wrapper" onclick="backdropClick(event)">
+      <div class="modal">
+        <h2 class="uppercase">Can you come?</h2>
+        <p>We realy hope you can make it.</p>
+        <input type="text" name="name" placeholder="Name(s)" />
+        <p><i>Sinceraly. John & Jane</i></p>
+        <div class="btns">
+          <button type="button" onclick="hideModal()">Going</button>
+          <button type="button" onclick="hideModal()">Can't come</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h5>Powered by <a href="w3.css">w3.css</a></h5>
+  </footer>
+  <script type="text/javascript">
+    function openModal() {
+      document.querySelector('#rsvpModal')
+        .classList.add('show');
+      document.querySelector('#rsvp')
+        .classList.add('modal-opened');
+    }
+    function backdropClick(e) {
+      e.stopPropagation();
+    }
+    function hideModal() {
+      document.querySelector('#rsvpModal')
+        .classList.remove('show');
+      document.querySelector('#rsvp')
+        .classList.remove('modal-opened');
+    }
+  </script>
+</body>
+</html>
